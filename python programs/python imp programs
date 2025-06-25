@@ -1,0 +1,76 @@
+
+#Python program to print Factorial number.
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact = fact * i
+    return fact
+num = int(input("Enter a number to find its factorial: "))
+if num < 0:
+    print("Factorial does not exist for negative numbers.")
+elif num == 0:
+    print("The factorial of 0 is 1.")
+else:
+    print("The factorial of", num, "is", factorial(num))
+
+
+# Python program to print Fibonacci series
+n = int(input("Enter the number of terms for Fibonacci series: "))
+a = 0
+b = 1
+
+print("Fibonacci Series:")
+for i in range(n):
+    print(a, end=" ")
+    c = a + b
+    a = b
+    b = c
+
+
+#Python program to give table of given number
+num = int(input("Enter a number to print its table: "))
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+
+# Python program to check number is Armstrong or not
+num = int(input("Enter a number: "))
+order = len(str(num))
+temp = num
+sum = 0
+while temp > 0:
+    digit = temp % 10
+    sum += digit ** order
+    temp = temp // 10
+if sum == num:
+    print(num, "is an Armstrong number.")
+else:
+    print(num, "is not an Armstrong number.")
+
+
+#program to print reverse string.
+s=input("Enter a string:")
+s2=s[::-1]
+print(s2)
+
+#Python program to check whether the string is Palindrome
+s=input("Enter a string:")
+s2=s[::-1]
+if s==s2:
+    print(s,"is palindrom")
+else:
+    print(s,"is not palindrom")
+
+#Python program to swap two variables.
+a = int(input("Enter a number:"))
+b = int(input("Enter a number:"))
+a, b = b, a
+print("a =", a, ", b =", b)
+
+#Python program to check Leap Year
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(year, "is a Leap Year.")
+else:
+    print(year, "is not a Leap Year.")
+
