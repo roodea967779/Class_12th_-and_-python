@@ -1,0 +1,133 @@
+# Python program to print Fibonacci series using UDF
+
+# User Defined Function to print Fibonacci series
+def fibonacci(n):
+    a, b = 0, 1
+    print("Fibonacci series:")
+    for i in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+# Taking input from the user
+num = int(input("Enter how many terms you want: "))
+
+# Calling the function
+fibonacci(num)
+
+
+
+# User Defined Function to check Armstrong number
+def is_armstrong(num):
+    sum = 0
+    temp = num
+    order = len(str(num))
+    
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** order
+        temp //= 10
+    
+    if sum == num:
+        print(num, "is an Armstrong number.")
+    else:
+        print(num, "is not an Armstrong number.")
+n = int(input("Enter a number: "))
+is_armstrong(n)
+
+
+# User Defined Function to find factorial
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    print("Factorial of", n, "is", fact)
+num = int(input("Enter a number: "))
+factorial(num)
+
+
+# User Defined Function to print table
+def printtable(n):
+    print("Table of", n)
+    for i in range(1, 11):
+        print(n, "x", i, "=", n * i)
+num = int(input("Enter a number: "))
+printtable(num)
+
+
+# User Defined Function to check palindrome
+def is_palindrome(n):
+    reverse = n[::-1]
+    if reverse == n:
+        print(n, "is a Palindrome.")
+    else:
+        print(n, "is not a Palindrome.")
+n = input("Enter a word or number: ")
+is_palindrome(n)
+
+
+
+# User Defined Function to check Leap Year
+def is_leap(year):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print(year, "is a Leap Year.")
+    else:
+        print(year, "is not a Leap Year.")
+y = int(input("Enter a year: "))
+is_leap(y)
+
+
+# User Defined Function to print marksheet
+def marksheet(name, marks):
+    total = sum(marks)
+    percentage = total / len(marks)
+    
+    print("\n----- Marksheet -----")
+    print("Name:", name)
+    print("Marks in Subjects:", marks)
+    print("Total Marks:", total)
+    print("Percentage:", percentage, "%")
+    
+    if percentage >= 90:
+        print("Grade: A+")
+    elif percentage >= 75:
+        print("Grade: A")
+    elif percentage >= 60:
+        print("Grade: B")
+    elif percentage >= 50:
+        print("Grade: C")
+    else:
+        print("Grade: Fail")
+name = input("Enter your name: ")
+marks = []
+for i in range(3):
+    m = float(input(f"Enter marks for subject {i+1}: "))
+    marks.append(m)
+marksheet(name, marks)
+
+
+
+# User Defined Functions for basic operations
+def add(a, b):
+    print("Addition:", a + b)
+
+def subtract(a, b):
+    print("Subtraction:", a - b)
+
+def multiply(a, b):
+    print("Multiplication:", a * b)
+
+def divide(a, b):
+    if b != 0:
+        print("Division:", a / b)
+    else:
+        print("Cannot divide by zero.")
+
+x = float(input("Enter first number: "))
+y = float(input("Enter second number: "))
+add(x, y)
+subtract(x, y)
+multiply(x, y)
+divide(x, y)
+
+
+
