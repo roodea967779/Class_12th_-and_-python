@@ -1,0 +1,120 @@
+# 1. Create a tuple and print it
+t = (10, 20, 30, 40)
+print("Tuple is:", t)
+
+# 2. Access elements by index
+print("First element:", t[0])
+print("Last element:", t[-1])
+
+# 3. Tuple slicing
+print("Elements from index 1 to 3:", t[1:4])
+
+# 4. Count occurrences of an element
+t = (1, 2, 2, 3, 4, 2)
+print("Count of 2:", t.count(2))
+
+# 5. Find index of an element
+print("Index of 3:", t.index(3))
+
+# 6. Length of a tuple
+print("Length of tuple:", len(t))
+
+# 7. Check if an element exists
+if 4 in t:
+    print("4 is in the tuple")
+else:
+    print("4 is not in the tuple")
+
+# 8. Convert tuple to list
+t = (5, 10, 15)
+lst = list(t)
+print("Converted to list:", lst)
+
+# 9. Concatenate two tuples
+t1 = (1, 2, 3)
+t2 = (4, 5)
+t3 = t1 + t2
+print("Concatenated tuple:", t3)
+
+# 10. Repeat a tuple
+t = ("Hi",) * 3
+print("Repeated tuple:", t)
+
+
+# 1. Print a tuple using UDF
+def print_tuple(t):
+    print("Tuple elements are:", t)
+
+t = (1, 2, 3, 4)
+print_tuple(t)
+
+# 2. Access tuple elements using UDF
+def access_tuple(t):
+    print("First element:", t[0])
+    print("Last element:", t[-1])
+
+t = (10, 20, 30, 40)
+access_tuple(t)
+
+# 3. Slice tuple using UDF
+def slice_tuple(t):
+    print("Middle elements:", t[1:-1])
+
+t = (1, 2, 3, 4, 5)
+slice_tuple(t)
+
+# 4. Count an element using UDF
+def count_element(t, value):
+    print("Count of", value, ":", t.count(value))
+
+t = (1, 2, 2, 3, 2)
+count_element(t, 2)
+
+# 5. Find index using UDF
+def find_index(t, value):
+    if value in t:
+        print("Index of", value, ":", t.index(value))
+    else:
+        print(value, "not found in tuple")
+
+t = (10, 20, 30)
+find_index(t, 20)
+
+# 6. Length of tuple using UDF
+def tuple_length(t):
+    print("Length of tuple is:", len(t))
+
+t = (5, 10, 15, 20)
+tuple_length(t)
+
+# 7. Check membership using UDF
+def check_membership(t, element):
+    if element in t:
+        print(element, "exists in the tuple")
+    else:
+        print(element, "does not exist in the tuple")
+
+t = (1, 3, 5)
+check_membership(t, 3)
+
+# 8. Convert tuple to list using UDF
+def convert_to_list(t):
+    print("List:", list(t))
+
+t = (100, 200, 300)
+convert_to_list(t)
+
+# 9. Concatenate two tuples using UDF
+def concat_tuples(t1, t2):
+    print("Concatenated tuple:", t1 + t2)
+
+t1 = (1, 2)
+t2 = (3, 4)
+concat_tuples(t1, t2)
+
+# 10. Repeat a tuple using UDF
+def repeat_tuple(t, times):
+    print("Repeated tuple:", t * times)
+
+t = ("A", "B")
+repeat_tuple(t, 3)
