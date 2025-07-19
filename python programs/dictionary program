@@ -1,0 +1,122 @@
+# 1. Create and print a dictionary
+d = {"name": "Ravi", "age": 17, "class": 12}
+print("Dictionary:", d)
+
+# 2. Access elements by key
+print("Name:", d["name"])
+print("Age:", d["age"])
+
+# 3. Add a new key-value pair
+d["school"] = "NCS"
+print("Updated Dictionary:", d)
+
+# 4. Modify an existing key
+d["age"] = 18
+print("Modified Dictionary:", d)
+
+# 5. Delete a key
+del d["class"]
+print("After deletion:", d)
+
+# 6. Get all keys, values, and items
+print("Keys:", d.keys())
+print("Values:", d.values())
+print("Items:", d.items())
+
+# 7. Check if key exists
+if "name" in d:
+    print("Key 'name' exists")
+
+# 8. Iterate through dictionary
+for key in d:
+    print(key, "->", d[key])
+
+# 9. Use get() method to access key safely
+print("Class:", d.get("class", "Not Found"))
+
+# 10. Copy dictionary
+d2 = d.copy()
+print("Copied Dictionary:", d2)
+
+
+  # 1. Print dictionary
+def print_dict(d):
+    print("Dictionary contents:", d)
+
+d = {"name": "Riya", "age": 16}
+print_dict(d)
+
+# 2. Access values using keys
+def access_keys(d):
+    print("Name:", d["name"])
+    print("Age:", d["age"])
+
+d = {"name": "Riya", "age": 16}
+access_keys(d)
+
+# 3. Add or update value
+def add_or_update(d, key, value):
+    d[key] = value
+    print("Updated dictionary:", d)
+
+d = {"city": "Ahmedabad"}
+add_or_update(d, "state", "Gujarat")
+
+# 4. Delete key using del
+def delete_key(d, key):
+    if key in d:
+        del d[key]
+    print("After deletion:", d)
+
+d = {"a": 1, "b": 2}
+delete_key(d, "a")
+
+# 5. Show keys, values, items
+def show_dict_details(d):
+    print("Keys:", list(d.keys()))
+    print("Values:", list(d.values()))
+    print("Items:", list(d.items()))
+
+d = {"x": 10, "y": 20}
+show_dict_details(d)
+
+# 6. Check key existence
+def check_key(d, key):
+    if key in d:
+        print("Key exists:", key)
+    else:
+        print("Key not found:", key)
+
+d = {"roll": 101}
+check_key(d, "roll")
+
+# 7. Iterate over dictionary
+def iterate_dict(d):
+    for k in d:
+        print(k, ":", d[k])
+
+d = {"sub1": 89, "sub2": 90}
+iterate_dict(d)
+
+# 8. Use get() safely
+def safe_get(d, key):
+    print("Value:", d.get(key, "Key Not Found"))
+
+d = {"math": 75}
+safe_get(d, "science")
+
+# 9. Copy dictionary
+def copy_dict(d):
+    new_dict = d.copy()
+    print("Copied Dictionary:", new_dict)
+
+d = {"lang": "Python", "level": "Easy"}
+copy_dict(d)
+
+# 10. Clear dictionary
+def clear_dict(d):
+    d.clear()
+    print("Cleared Dictionary:", d)
+
+d = {"temp": 37}
+clear_dict(d)
