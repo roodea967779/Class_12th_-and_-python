@@ -1,0 +1,116 @@
+# 1. Program to reverse a string
+s = input("Enter a string: ")
+print("Reversed string is:", s[::-1])
+
+# 2. Program to check if string is palindrome
+s = input("Enter a string: ")
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+# 3. Program to count vowels in a string
+s = input("Enter a string: ")
+vowels = "aeiouAEIOU"
+count = 0
+for ch in s:
+    if ch in vowels:
+        count += 1
+print("Number of vowels:", count)
+
+# 4. Program to count number of words in a string
+s = input("Enter a sentence: ")
+words = s.split()
+print("Number of words:", len(words))
+
+# 5. Program to count frequency of each character
+s = input("Enter a string: ")
+freq = {}
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
+print("Character frequencies:", freq)
+
+# 6. Program to convert string to uppercase and lowercase
+s = input("Enter a string: ")
+print("Uppercase:", s.upper())
+print("Lowercase:", s.lower())
+
+# 7. Program to remove spaces from a string
+s = input("Enter a string: ")
+no_space = s.replace(" ", "")
+print("String without spaces:", no_space)
+
+# 8. Program to print each character in string with its position
+s = input("Enter a string: ")
+for i in range(len(s)):
+    print("Character at index", i, ":", s[i])
+# 1. Reverse string using UDF
+def reverse_string(s):
+    print("Reversed:", s[::-1])
+
+s = input("Enter string: ")
+reverse_string(s)
+
+# 2. Check if string is palindrome
+def check_palindrome(s):
+    if s == s[::-1]:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+
+s = input("Enter string: ")
+check_palindrome(s)
+
+# 3. Count vowels using UDF
+def count_vowels(s):
+    count = 0
+    for ch in s:
+        if ch.lower() in "aeiou":
+            count += 1
+    print("Number of vowels:", count)
+
+s = input("Enter string: ")
+count_vowels(s)
+
+# 4. Count words using UDF
+def count_words(s):
+    words = s.split()
+    print("Number of words:", len(words))
+
+s = input("Enter a sentence: ")
+count_words(s)
+
+# 5. Frequency of characters
+def char_frequency(s):
+    freq = {}
+    for ch in s:
+        freq[ch] = freq.get(ch, 0) + 1
+    print("Character frequencies:")
+    for k in freq:
+        print(k, ":", freq[k])
+
+s = input("Enter string: ")
+char_frequency(s)
+
+# 6. Upper and lower case using UDF
+def case_conversion(s):
+    print("Uppercase:", s.upper())
+    print("Lowercase:", s.lower())
+
+s = input("Enter string: ")
+case_conversion(s)
+
+# 7. Remove spaces using UDF
+def remove_spaces(s):
+    print("Without spaces:", s.replace(" ", ""))
+
+s = input("Enter string: ")
+remove_spaces(s)
+
+# 8. Print characters with position
+def print_characters(s):
+    for i in range(len(s)):
+        print("Character at index", i, ":", s[i])
+
+s = input("Enter string: ")
+print_characters(s)
