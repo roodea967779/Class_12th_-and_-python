@@ -1,0 +1,101 @@
+#1 check wether number is palindrome or  not
+num = int(input("Enter a number: "))
+if str(num) == str(num)[::-1]:
+    print("It is a palindrome.")
+else:
+    print("It is not a palindrome.")
+
+#2 ASCII Code of Character and Vice Versa
+char = input("Enter a character: ")
+print("ASCII code of", char, "is", ord(char))
+
+code = int(input("Enter an ASCII code: "))
+print("Character for ASCII code", code, "is", chr(code))
+
+
+#3 Simple Calculator
+def calculator(a, b, op):
+    if op == '+':
+        return a + b
+    elif op == '-':
+        return a - b
+    elif op == '*':
+        return a * b
+    elif op == '/':
+        return a / b
+    else:
+        return "Invalid operator"
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+op = input("Enter operator (+, -, *, /): ")
+
+print("Result:", calculator(a, b, op))
+
+
+#4 Global and Local Variables
+x = 100  # Global variable
+
+def show():
+    x = 50  # Local variable
+    print("Local x:", x)
+
+show()
+print("Global x:", x)
+
+
+#5 Count Vowels, Consonants, Digits, Special Characters
+text = input("Enter a string: ")
+vowels = consonants = digits = special = 0
+
+for ch in text:
+    if ch.isalpha():
+        if ch.lower() in 'aeiou':
+            vowels += 1
+        else:
+            consonants += 1
+    elif ch.isdigit():
+        digits += 1
+    else:
+        special += 1
+
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+print("Digits:", digits)
+print("Special characters:", special)
+
+
+#6 Add Marks and Calculate Grade
+Easy Python Program: Add Marks and Calculate Grade
+python
+Copy
+Edit
+# Take marks of 3 subjects
+m1 = int(input("Enter marks in Subject 1: "))
+m2 = int(input("Enter marks in Subject 2: "))
+m3 = int(input("Enter marks in Subject 3: "))
+total = m1 + m2 + m3
+average = total / 3
+if average >= 90:
+    grade = "A"
+elif average >= 75:
+    grade = "B"
+elif average >= 60:
+    grade = "C"
+elif average >= 40:
+    grade = "D"
+else:
+    grade = "F"
+
+print("Total Marks:", total)
+print("Average Marks:", average)
+print("Grade:", grade)
+
+
+#7 Generate List Using For Loop
+num_list = []
+for i in range(1, 11):
+    num_list.append(i)
+
+print("List of numbers from 1 to 10:", num_list)
+
