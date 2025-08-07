@@ -66,11 +66,6 @@ print("Special characters:", special)
 
 
 #6 Add Marks and Calculate Grade
-Easy Python Program: Add Marks and Calculate Grade
-python
-Copy
-Edit
-# Take marks of 3 subjects
 m1 = int(input("Enter marks in Subject 1: "))
 m2 = int(input("Enter marks in Subject 2: "))
 m3 = int(input("Enter marks in Subject 3: "))
